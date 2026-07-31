@@ -1,0 +1,59 @@
+{
+  "feature_columns": [
+    "B (m)",
+    "L (m)",
+    "H (m)",
+    "E (MPa)",
+    "Ro (kg/m^3)"
+  ],
+  "roles": {
+    "B": "B (m)",
+    "L": "L (m)",
+    "H": "H (m)",
+    "E": "E (MPa)",
+    "rho": "Ro (kg/m^3)"
+  },
+  "ranges": {
+    "B (m)": {
+      "min": 7.25,
+      "max": 19.5,
+      "default": 11.45
+    },
+    "L (m)": {
+      "min": 6.45,
+      "max": 11.08,
+      "default": 9.54
+    },
+    "H (m)": {
+      "min": 3.0,
+      "max": 15.0,
+      "default": 7.0
+    },
+    "E (MPa)": {
+      "min": 750.0,
+      "max": 5500.0,
+      "default": 2500.0
+    },
+    "Ro (kg/m^3)": {
+      "min": 950.0,
+      "max": 3000.0,
+      "default": 1900.0
+    }
+  },
+  "targets": [
+    "f1 (Hz)"
+  ],
+  "models": {
+    "f1 (Hz)": {
+      "RandomForest": "models/f1_hz_randomforest.joblib",
+      "XGBoost": "models/f1_hz_xgboost.joblib",
+      "LightGBM": "models/f1_hz_lightgbm.joblib",
+      "CatBoost": "models/f1_hz_catboost.joblib",
+      "MLP": "models/f1_hz_mlp.joblib"
+    }
+  },
+  "equations": {
+    "linear_f1": "f1=-1.234+0.233B+0.531L-0.738H+3.144sqrt(E/rho)",
+    "symbolic_f1": "f1=sqrt(E/rho)(1.273L/H-0.395)/((L/(B+5.428))^4+0.278)"
+  }
+}

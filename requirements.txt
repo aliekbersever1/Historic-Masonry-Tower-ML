@@ -1,11 +1,8 @@
-numpy
+streamlit
 pandas
-matplotlib
+numpy
 scikit-learn
+joblib
 xgboost
 lightgbm
 catboost
-shap
-pysr
-openpyxl
-python-docx
