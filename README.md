@@ -1,6 +1,6 @@
-# Historic Masonry Tower ML
+# Masonry Buildings  ML
 
-Machine Learning and Symbolic Regression models for predicting the first and second natural frequencies of historic masonry towers.
+Machine Learning and Symbolic Regression models for predicting the first and second natural frequencies of historic masonry buildings.
 
 ---
 
@@ -8,7 +8,7 @@ Machine Learning and Symbolic Regression models for predicting the first and sec
 
 This repository contains the Python codes developed for the following study:
 
-**Machine Learning and Symbolic Regression Models for Predicting the Natural Frequencies of Historic Masonry Towers**
+**Machine Learning and Symbolic Regression Models for Predicting the Natural Frequencies of Masonry Buildings**
 
 The repository includes:
 
@@ -27,7 +27,7 @@ The repository includes:
 ## Repository Structure
 
 ```
-Historic-Masonry-Tower-ML
+Masonr-Buildings-ML
 │
 ├── data/
 │     Kombinations.xlsx
